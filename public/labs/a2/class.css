@@ -1,0 +1,25 @@
+.wd-kanbas-navigation .list-group {
+    border-radius: 0;
+}
+
+.wd-kanbas-navigation .list-group-item {
+    color: red;
+    background-color: var(--bs-list-group-bg);
+    border: none;
+}
+
+.wd-kanbas-navigation .list-group-item.active {
+    color: black;
+    background-color: white;
+    border-color: white;
+    border-left: 1px solid black;
+}
+
+.wd-dashboard-grid .col {
+    width: 300px;
+}
+
+.wd-dashboard .card {
+    width: 100%; /* Make cards responsive to their container width */
+    max-width: 300px; /* Limit maximum width of cards */
+}
