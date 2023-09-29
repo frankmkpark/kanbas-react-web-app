@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+</head>
+<body>
+    <table>
+        <tr valign="baseline">
+            <td colspan="4">
+                <ul>
+                    <li><a href="../Profile/account.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../Home/index-courses.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td colspan="4">
+                <ul>
+                    <li><a href="../Home/home.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="../Assignments/index.html">Assignments</a></li>
+                    <li><a href="../Grades/grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../Settings/course-details.html">Settings</a></li>
+                </ul>
+            </td>
+            <td colspan="4">
+                <form id="text-fields">
+                    <label for="dropdown"></label>
+                    <select id="dropdown">
+                        <option value="SpeedGrader">SpeedGrader</option>
+                    </select>
+                    <hr>
+                    <label for="text-fields-assignment-name">Assignment Name</label><br />
+                    <input type="text" value="A5 - NODE + SESSION" id="text-fields-assignment-name" placeholder = "Assignment Name"/><br /><br />
+                    Description<br />
+                    <textarea cols="45" rows="2">Description of the Assigment goes here</textarea><br/><br/>
+                    <label for="text-fields-points">Points</label><br/>
+                    <input id="text-fields-points" type="number" min="0" max="100" /><br /><br/>
+                    <label for="dropdown-assignment-group">Assignment Group</label><br/>
+                    <select id="dropdown-assignment-group">
+                        <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+                    </select><br/><br/>
+                    <label for="dropdown-grade">Display Grade as</label><br/>
+                    <select id="dropdown-grade">
+                        <option value="Percentage">Percentage</option>
+                    </select><br/><br/>
+                    <label for="dropdown-submission-type">Submission Type</label><br/>
+                    <select id="dropdown-submission-type">
+                        <option value="Online">Online</option>
+                    </select><br/><br/>
+                    <label>Online Entry Options:</label>
+                    <br />
+                    <!-- 2 different ways-->
+                    <label><input type="checkbox" name="check-entry" id="chkbox-text" /> Text Entry</label><br />
+                    
+                    <input type="checkbox" name="check-entry" id="chkbox-website" />
+                    <label for="chkbox-website">Website URL</label> <br />
+
+                    <input type="checkbox" name="check-entry" id="chkbox-media" />
+                    <label for="chkbox-media">Media Recordings</label> <br />
+                    <input type="checkbox" name="check-entry" id="chkbox-annotation" />
+                    <label for="chkbox-annotation">Student Annotation</label> <br />
+                    <input type="checkbox" name="check-entry" id="chkbox-file" />
+                    <label for="chkbox-file">File Uploads</label><br/><br/>
+                    <label for="dropdown-attempts">Submission Attempts</label><br/>
+                    <select id="dropdown-attempts">
+                        <option value="attempts">Unlimited</option>
+                    </select><br/><br/>
+                    <label for="dropdown-plagiarism">Plagiarism Review:</label><br/>
+                    <select id="dropdown-plagiarism">
+                        <option value="plagiarism">None</option>
+                    </select><br/><br/>
+                    <label>Group Assignment</label>
+                    <br />
+                    <input type="checkbox" value="Group-Assignment" name="check-gp-assignment" id="chkbox-gp-assignment" />
+                    <label for="chkbox-gp-assignment">This is a group assignment</label> <br /><br/>
+                    <label>Peer Reviews</label>
+                    <br />
+                    <input type="checkbox" value="Group-Assignment" name="check-peer-reviews" id="chkbox-peer-reviews" />
+                    <label for="chkbox-peer-reviews">Require Peer Reviews</label><br/><br/>
+                    <label for="text-fields-points">Assign<br/>Assign to<br/></label>
+                    <input id="text-fields-points" /><br /><br />
+                    <label for="text-fields-due">Due</label><br/>
+                    <input type="date" id="text-fields-due" value="2023-01-01" /><br /><br />
+                    <label for="text-fields-available-from">Available from</label><br/>
+                    <input type="date" id="text-fields-available-from" value="2023-01-01" /><br /><br />
+                    <label for="text-fields-available-until">Until</label><br/>
+                    <input type="date" id="text-fields-available-until" value="2023-01-01" /><br /><br />
+                    <button onclick="window.location.href='index.html'">Cancel</button>
+                    <button onclick="window.location.href='index.html'">Save</button>
+
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
