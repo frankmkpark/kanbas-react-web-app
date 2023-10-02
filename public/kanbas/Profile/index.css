@@ -100,3 +100,8 @@
   width: 20%;
   float: left;
 } */
+
+.my-link {
+  color: red; /* Change to your desired color */
+  text-decoration: none; /* Optional: Remove underlines */
+}
