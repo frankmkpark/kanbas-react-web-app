@@ -5,6 +5,7 @@
     padding: 0px;
     width: 80px; /* Set the width between 75 and 85 pixels */
     margin: 0px;
+    height: 100%;
 }
 
 .wd-kanbas-navigation li {
