@@ -1,0 +1,43 @@
+/* Navigation Menu styling */
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    width: 80px; /* Set the width between 75 and 85 pixels */
+    margin: 0px;
+}
+
+.wd-kanbas-navigation li {
+    width: 80px; /* Set a fixed width between 75 and 85 pixels for each list item */
+    height: 80px; /* Allow the height to adjust based on content */
+    padding: 5px 5px 5px 5px; /* Set padding around links between 5 and 10 pixels */
+    font-size: 1em;
+    text-align: center;
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Align content to the end vertically */
+}
+
+.wd-kanbas-navigation li.wd-active {
+    background-color: white; /* Selected (active) links have a white background */
+}
+
+.wd-kanbas-navigation li.wd-active a {
+    color: red; /* Selected (active) links have red text */
+}
+
+.wd-kanbas-navigation a:hover {
+    color: white; /* Hovered links have a black background */
+}
+
+.wd-kanbas-navigation a {
+    color: white; /* Non-selected links have white text */
+    text-decoration: none;
+}
+
+.wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
