@@ -6,9 +6,10 @@
         <title>Home</title>
         <link rel="stylesheet" href="../../vendors/fontawesome-free-5.15.4-web/css/all.css">
         <link href="https://cdn.jsdelivr.net/npm/font-awesome@6.4.2/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.css">
+        
     </head>
 <body>
     <div style ="display: flex">
@@ -17,8 +18,8 @@
                     <li>
                         <img src="../NEU.png" height="80px" width="80px">
                     </li>
-                    <li class="wd-active">
-                        <a href="/public/kanbas/Home/index.html" id="accountLink">
+                    <li>
+                        <a href="/public/kanbas/Profile/index.html" id="accountLink">
                             <i class="fas fa-user-circle fa-lg" style="color:lightgray"></i><br>
                             Account
                         </a>                
@@ -29,7 +30,7 @@
                             Dashboard
                         </a>
                     </li>
-                    <li>
+                    <li class="wd-active">
                         <a href="/public/kanbas/Courses/index.html">
                             <i class="fa fa-solid fa-book"></i><br>
                             Courses
@@ -67,46 +68,51 @@
                     </li>
                 </ul>
             </div>
-            <div style="flex-basis: 19%; display: flex; flex-direction: column;">
+            <div style="flex-basis: 20%; display: flex; flex-direction: column;">
                 <div class="center-container">
-                    <button class="bar" style="width: 40px">
-                        <br>
-                        <i class="fas fa-bars fa-lg" style="color:red"></i>
-                    </button>
-                    <p style="font-size: 20px;"><br>&nbsp &nbspMyungkeun Park's Profile</p>
-                    <hr style="width: 400%">
-                </div>                            
+                    <br>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb" style="background-color: transparent;">
+                            <li class="breadcrumb-item"><a href="#" style="color: red;">CS5610 12531 202132</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                        </ol>
+                    </nav>
+                </div>
+                <hr style="width: 400%">
                 <ul class="wd-course-navigation">
-                    <li><a href="#">Notifications</a></li>
-                    <li class="wd-active"><a href="./index.html"><b>Profile</b></a></li>
+                    <li><a href="#"><b>Home</b></a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="../Assignments/index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li class="wd-active"><a href="../Grades/grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
                     <li><a href="#">Files</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">ePortfolios</a></li>
-                    <li><a href="#">Shared Content</a></li>
-                    <li><a href="#">The Hub</a></li>
-                    <li><a href="#">Qwickly Course<br>Tools</a></li>
-                    <li><a href="#">Global<br>Announcements</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../Settings/course-details.html">Settings</a></li>
                 </ul>
             </div>
-            <div style="flex-basis: 74%">
-                <div style="margin-top: 130px;">                    
-                    <i class="fas fa-user-circle fa-10x" style="color:lightgray"></i><br>
-                    <h2>Myungkeun Park</h2>
-                    <br>
-                    <h3>Contact</h3>  
-                    <p>No registered services, you can add some on the <a href="#" class="my-link">settings</a> page.</p>
-                    <h3>Biography</h3>
-                    <p>Student</p>
-                    <h3>Links</h3>
-                    <a href="https://www.youtube.com/watch?v=9XsRrm-VKj4" class="my-link">
-                        <i class="fas fa-link" style="color:lightgray"></i>&nbsp;&nbsp;
-                        YouTube
-                        <i class="far fa-window-maximize"></i>
-                      </a><br>
-                    </div>
-                    <button class="btn btn-secondary" onclick="window.location.href='edit.html'" style="position: absolute; top: 130px; right: 100px;"><i class="fas fa-pencil-alt fa-flip-horizontal" style="color: #717171;"></i></i>Edit Profile</button>
-                </div>
-        </div>
+            <div style="flex-basis: 55%; margin-top: 130px;">                    
+                <div class="float-end" style="text-align: right">
+                    <button class="btn btn-secondary custom-btn">Collapse All</button>
+                    <button class="btn btn-secondary custom-btn">View Progress</button>
+                    <select class="btn btn-secondary custom-btn">
+                        <option>Publish All</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                    <button class="btn btn-danger custom-btn"><i class="fas fa-plus"></i>&nbsp;&nbsp;Module</button>
+                    <button class="btn btn-secondary" style="width:0.8cm"><b>⋮</b></button>
+                </div><br>
+            </div>
     </div>
 </body>
 </html>

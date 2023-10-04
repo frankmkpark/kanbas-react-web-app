@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Fontawesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <table class="table">
+        <tr valign="baseline">
+            <!-- ... Your other <td> elements ... -->
+            <td colspan="4">
+                <div class="mb-3">
+                    <button class="btn btn-secondary">Collapse All</button>
+                    <button class="btn btn-secondary">View Progress</button>
+                    <!-- Bootstrap dropdown for "Publish All" -->
+                    <div class="dropdown float-end">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Module
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Gradebook</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                            <li><a class="dropdown-item" href="#">Option 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-secondary">Week 0 - INTRO</li>
+                    <li class="list-group-item">LEARNING OBJECTIVES</li>
+                    <li class="list-group-item ms-3">
+                        <i class="fas fa-check float-end"></i>
+                        Introduction to the course
+                    </li>
+                    <!-- ... Add other list items similarly ... -->
+                </ul>
+                <!-- ... Repeat for other weeks ... -->
+            </td>
+            <!-- ... Your other <td> elements ... -->
+        </tr>
+    </table>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
