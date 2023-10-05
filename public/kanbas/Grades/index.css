@@ -83,7 +83,7 @@
 .wd-grid-col-left-sidebar,
 .wd-grid-col-main-content,
 .wd-grid-col-right-sidebar {
-  box-sizing: border-box;  /* Added box-sizing to ensure padding and borders are included in width */
+  box-sizing: border-box; 
 }
 
 .wd-grid-col-left-sidebar {
@@ -96,14 +96,10 @@
   float: left;
 }
 
-/* .wd-grid-col-right-sidebar {
-  width: 20%;
-  float: left;
-} */
 
 .my-link {
-  color: red; /* Change to your desired color */
-  text-decoration: none; /* Optional: Remove underlines */
+  color: red; 
+  text-decoration: none; 
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -118,7 +114,7 @@
 }
 
 .custom-grey-bg {
-  background-color:   #eceff1   ; /* This is a light grey color. Adjust as needed. */
+  background-color:   #eceff1   ;
 }
 
 .flex-container {

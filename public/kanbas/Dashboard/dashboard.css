@@ -48,7 +48,7 @@
   list-style: none;
   padding: 0px;
   margin: 0px;
-  margin-left: 10px;  /* Reduced margin-left from 20px to 10px */
+  margin-left: 10px;
 }
 
 .wd-course-navigation li {
@@ -74,9 +74,9 @@
 
 .bar, p {
   display: inline-block;
-  vertical-align: middle; /* This will vertically align the middle of the elements */
+  vertical-align: middle;
   border: none;
-  background: none; /* This will remove any default background color */
+  background: none; 
 }
 
 
@@ -84,7 +84,7 @@
 .wd-grid-col-left-sidebar,
 .wd-grid-col-main-content,
 .wd-grid-col-right-sidebar {
-  box-sizing: border-box;  /* Added box-sizing to ensure padding and borders are included in width */
+  box-sizing: border-box;
 }
 
 .wd-grid-col-left-sidebar {
@@ -97,12 +97,7 @@
   float: left;
 }
 
-/* .wd-grid-col-right-sidebar {
-  width: 20%;
-  float: left;
-} */
-
 .my-link {
-  color: red; /* Change to your desired color */
-  text-decoration: none; /* Optional: Remove underlines */
+  color: red;
+  text-decoration: none;
 }
