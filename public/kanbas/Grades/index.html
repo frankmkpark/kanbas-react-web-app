@@ -74,7 +74,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb" style="background-color: transparent;">
                             <li class="breadcrumb-item"><a href="#" style="color: red;">CS5610 12531 202132</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            <li class="breadcrumb-item active" aria-current="page" style="color:black">Grades</li>
                         </ol>
                     </nav>
                 </div>
@@ -86,7 +86,7 @@
                     <li><a href="#">Zoom Meetings</a></li>
                     <li><a href="../Assignments/index.html">Assignments</a></li>
                     <li><a href="#">Quizzes</a></li>
-                    <li class="wd-active"><a href="../Grades/grades.html">Grades</a></li>
+                    <li class="wd-active"><a href="#"><b>Grades</b></a></li>
                     <li><a href="#">People</a></li>
                     <li><a href="#">Panopto Video</a></li>
                     <li><a href="#">Discussions</a></li>
@@ -100,19 +100,88 @@
                     <li><a href="../Settings/course-details.html">Settings</a></li>
                 </ul>
             </div>
-            <div style="flex-basis: 55%; margin-top: 130px;">                    
+            <div style="flex-basis: 70%; margin-top: 130px;">                    
                 <div class="float-end" style="text-align: right">
-                    <button class="btn btn-secondary custom-btn">Collapse All</button>
-                    <button class="btn btn-secondary custom-btn">View Progress</button>
-                    <select class="btn btn-secondary custom-btn">
-                        <option>Publish All</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
+                    <button class="btn btn-secondary custom-btn"><i class="fas fa-file-import"></i>  Import</button>
+                    <select class="btn btn-secondary custom-btn"><i class="fas fa-file-export"></i></button>
+                            <option>Export</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
                     </select>
-                    <button class="btn btn-danger custom-btn"><i class="fas fa-plus"></i>&nbsp;&nbsp;Module</button>
-                    <button class="btn btn-secondary" style="width:0.8cm"><b>⋮</b></button>
-                </div><br>
-            </div>
+                    <button class="btn btn-secondary" style="width:1cm; height:0.8cm"><i class="fas fa-cog" style="color: #646464;"></i></button>
+                </div>
+                <br>
+                <div class="header-container">
+                    <div class="header-item">
+                        <h4 class="header-title"><b>Student Names</b></h4>
+                        <div class="form-group">
+                            <select class="form-control" id="select-student-promouns">                              
+                                <option value="None">Search Students</option>
+                                <option value="He/Him">He/Him</option>
+                                <option value="She/Her">She/Her</option>
+                                <option value="They/Them">They/Them</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="header-item">
+                        <h4 class="header-title"><b>Assignment Names</b></h4>
+                        <select class="form-control" id="select-assignment-promouns">
+                            <option value="None">Search Assignments</option>
+                            <option value="He/Him">He/Him</option>
+                            <option value="She/Her">She/Her</option>
+                            <option value="They/Them">They/Them</option>
+                        </select>
+                    </div>
+                </div>                
+                <button class="btn btn-secondary custom-btn"><i class="fas fa-filter" style="color: #424242;"></i></i> Apply Filters</button>
+                <br>
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th id="left1" scope="col">Student Name</th>
+                            <th id="center" scope="col">A1 SETUP<br>Out of 100</th>
+                            <th id="center" scope="col">A2 HTML<br>Out of 100</th>
+                            <th id="center" scope="col">A3 CSS<br>Out of 100</th>
+                            <th id="center" scope="col">A4 BOOSTRAP<br>Out of 100</th>
+                            <th id="center" scope="col">A5 Course<br>Out of 100</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th id="left2" scope="row">Doxa Asibey</th>
+                            <td><input type="text" value="100%" class="form-control centered-input"></td>                            <td>100%</td>
+                            <td>89.65%</td>
+                            <td>98.65%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <th id="left2" scope="row">Quinn Robertson</th>
+                            <td>70%</td>
+                            <td>800%</td>
+                            <td>90%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <th id="left2" scope="row">Ashely Lau</th>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <th id="left2" scope="row">Placeholder</th>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                        </tr>
+                    </tbody>
+                </table> 
+        </div>
     </div>
 </body>
 </html>

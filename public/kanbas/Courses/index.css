@@ -79,11 +79,10 @@
 }
 
 
-/* Layout classes */
 .wd-grid-col-left-sidebar,
 .wd-grid-col-main-content,
 .wd-grid-col-right-sidebar {
-  box-sizing: border-box;  /* Added box-sizing to ensure padding and borders are included in width */
+  box-sizing: border-box;
 }
 
 .wd-grid-col-left-sidebar {
@@ -96,10 +95,9 @@
   float: left;
 }
 
-/* .wd-grid-col-right-sidebar {
-  width: 20%;
-  float: left;
-} */
+.custom-indent {
+  padding-left: 50px;
+}
 
 .my-link {
   color: red; /* Change to your desired color */
@@ -126,4 +124,15 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.btn-consistent-width {
+  width: 250px; 
+  text-align: left;
+}
+
+.smaller-text {
+
+  font-size: 14px;
+
 }
