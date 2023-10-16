@@ -1,0 +1,44 @@
+/* Navigation Menu styling */
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    width: 80px;
+    margin: 0px;
+    height: 100%;
+}
+
+.wd-kanbas-navigation li {
+    width: 80px; 
+    height: 80px; 
+    padding: 5px 5px 5px 5px; 
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.wd-kanbas-navigation li.wd-active {
+    background-color: white; 
+}
+
+.wd-kanbas-navigation li.wd-active a {
+    color: red;
+}
+
+.wd-kanbas-navigation a:hover {
+    color: white;
+}
+
+.wd-kanbas-navigation a {
+    color: white; 
+    text-decoration: none;
+}
+
+.wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+}

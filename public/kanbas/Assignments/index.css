@@ -1,0 +1,143 @@
+.wd-kanbas-navigation {
+  background-color: black;
+  list-style: none;
+  padding: 0px;
+  width: 80px;
+  height: 100%;
+  margin: 0px;
+}
+
+.wd-kanbas-navigation li {
+  height: 80px;
+  width: 80px;
+  padding: 5px 5px 5px 5px;
+  font-size: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wd-kanbas-navigation li.wd-active {
+  background-color: white;
+}
+
+.wd-kanbas-navigation li.wd-active a {
+  color: red;
+}
+
+.wd-kanbas-navigation a:hover {
+  color: white;
+}
+
+.wd-kanbas-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.wd-kanbas-navigation a i {
+  color: red;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.wd-course-navigation {
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.wd-course-navigation li {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wd-course-navigation li.wd-active {
+  border-left: 2px solid black;
+}
+
+.wd-course-navigation li.wd-active a {
+  color: black;
+}
+
+.wd-course-navigation a {
+  color: red;
+  text-decoration: none;
+}
+
+.bar, p {
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  background: none;
+}
+
+
+/* Layout classes */
+.wd-grid-col-left-sidebar,
+.wd-grid-col-main-content,
+.wd-grid-col-right-sidebar {
+  box-sizing: border-box; 
+}
+
+.wd-grid-col-left-sidebar {
+  width: 13%;
+  float: left;
+}
+
+.wd-grid-col-main-content {
+  width: 87%;
+  float: left;
+}
+
+
+.my-link {
+  color: red; 
+  text-decoration: none; 
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: inherit;
+}
+
+
+.custom-btn {
+  width: 120px;
+  height: 30px;
+}
+
+.custom-grey-bg {
+  background-color:   #eceff1   ;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.checkbox-container {
+  border: 1px solid lightgray;
+  padding: 20px;
+  width: 300px; 
+  font-size: 1em; 
+  margin-left: -55px;
+  float: left;
+}
+
+input[type="checkbox"] {
+  border: 1px solid lightgray;
+  padding: 5px;
+}

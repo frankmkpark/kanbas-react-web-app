@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +30,95 @@
                     <li><a href="#">Zoom Meetings</a></li>
                     <li><a href="../Assignments/index.html">Assignments</a></li>
                     <li><a href="../Grades/grades.html">Grades</a></li>
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="../../vendors/fontawesome-free-5.15.4-web/css/all.css">
+        <link href="https://cdn.jsdelivr.net/npm/font-awesome@6.4.2/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <div style ="display: flex">
+        <div style="flex-basis: 10%">
+            <ul class="wd-kanbas-navigation">
+                    <li>
+                        <img src="../NEU.png" height="80px" width="80px">
+                    </li>
+                    <li>
+                        <a href="../Profile/index.html" id="accountLink">
+                            <i class="fas fa-user-circle fa-lg" style="color:lightgray"></i><br>
+                            Account
+                        </a>                
+                    </li>
+                    <li>
+                        <a href="../Dashboard/dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i><br>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="../Courses/index.html">
+                            <i class="fa fa-solid fa-book"></i><br>
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i><br>
+                            Calendar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-inbox"></i><br>
+                            Inbox
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-history"></i><br>
+                            History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tv"></i><br>
+                            Studio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-question-circle"></i><br>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div style="flex-basis: 25%; display: flex; flex-direction: column;">
+                <div class="center-container">
+                    <br>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb" style="background-color: transparent;">
+                            <li class="breadcrumb-item"><a href="#" style="color: red;">CS5610 12531 202132</a></li>
+                            <li class="breadcrumb-item">Assignnments</li>
+                            <li class="breadcrumb-item active" aria-current="page" style="color:black">A1 ENV</li>
+                        </ol>
+                    </nav>
+                </div>
+                <hr style="width: 400%">
+                <ul class="wd-course-navigation">
+                    <li><a href="../Courses/index.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li class="wd-active"><b><a href="../Assignments/index.html">Assignments</a></b></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="../Grades/index.html">Grades</a></li>
+>>>>>>> a2
                     <li><a href="#">People</a></li>
                     <li><a href="#">Panopto Video</a></li>
                     <li><a href="#">Discussions</a></li>
@@ -41,6 +131,7 @@
                     <li><a href="#">Syllabus</a></li>
                     <li><a href="../Settings/course-details.html">Settings</a></li>
                 </ul>
+<<<<<<< HEAD
             </td>
             <td colspan="4">
                 <form id="text-fields">
@@ -114,3 +205,181 @@
     </table>
 </body>
 </html>
+=======
+            </div>
+            <div style="flex-basis: 65%; margin-top: 130px;">                    
+                <br>
+                <br>
+                <hr>
+                Assignment Name
+                <form>
+                    <div class="form-group">
+                      <input type="assignment-name" class="form-control" placeholder="A1 ENV + HTML">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="This assignment describes how to install the development environment for creating and working with Web Applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify." rows="4"></textarea>
+                    </div>
+                    <div style="display: flex; justify-content: center; height: 100vh;">
+                        <div>
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <div class="float-end" style="width: 150px;">
+                                    Points
+                                </div>
+                                <div class="form-group ; col-md-10">
+                                    <input type="text" class="form-control" placeholder="100">
+                                </div>
+                            </div>
+                                <div style="display: flex; align-items: center; margin-top: 10px">
+                                <div class="float-end" style="width: 150px;">
+                                    Assignments Group
+                                </div>
+                                <div class="form-group; col-md-10">
+                                    <select class="form-control">
+                                        <option value="">ASSIGNMENTS</option>
+                                        <option value="assignment1">Assignment 1</option>
+                                        <option value="assignment2">Assignment 2</option>
+                                        <option value="assignment3">Assignment 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        <div style="display: flex; align-items: center; margin-top: 10px">
+                        <div class="float-end" style="width: 150px;">
+                            Display Grade as
+                        </div>
+                        <div class="form-group; col-md-10">
+                            <select class="form-control">
+                                <option value="">Percentage</option>
+                                <option value="assignment1">Assignment 1</option>
+                                <option value="assignment2">Assignment 2</option>
+                                <option value="assignment3">Assignment 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-top: 10px">
+                        <div class="float-end" style="width: 150px;">
+                        </div>
+                        <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      Do not count this assignment towards the final grade
+                                    </label>
+                                  </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-top: 10px">
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    Submission Type
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkbox-container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <select class="form-control">
+                                                    <option value="">Online</option>
+                                                    <option value="assignment1">Assignment 1</option>
+                                                    <option value="assignment2">Assignment 2</option>
+                                                    <option value="assignment3">Assignment 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <b>Online Entry Options<b></b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <input type="checkbox"/>
+                                                <label>Text Entry</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-12">
+                                                        <input type="checkbox"/>
+                                                        <label>Website URL</label>
+                                                    </div>
+                                                </div>
+                                        <div class="row">
+                                                <div class="col-md-12">
+                                                    <input type="checkbox"/>
+                                                    <label>Media Recordings</label>
+                                                    </div>
+                                                </div>
+                                        <div class="row">
+                                                    <div class="col-md-12">
+                                                        <input type="checkbox"/>
+                                                        <label>Student Annotation</label>
+                                                    </div>
+                                                </div>
+                                        <div class="row">
+                                                    <div class="col-md-12">
+                                                        <input type="checkbox"/>
+                                                        <label for="chkbox-groupassignment5">File Upload</label>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-top: 10px">
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    Assign&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkbox-container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                Assign To
+                                                <div class="form-group ; col-md-12">
+                                                    <input type="text" class="form-control" placeholder="Everyone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                Due 
+                                                <div class="form-group ; col-md-12">
+                                                    <input type="text" class="form-control" placeholder="Sep 18, 2023 11:59PM">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Available From
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Sep 18, 2023 11:59PM">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                Until 
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>                                     
+                    </form>
+            </div>
+        </div>
+        <br />
+        <div class="row align-items-center"> 
+            <div class="col-md-7"> 
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Notify the users that this content has changed
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-5 text-center">
+                <button onclick="window.location.href='index.html'" class="btn btn-secondary">Cancel</button>
+                <button onclick="window.location.href='index.html'" class="btn btn-danger">Save</button>
+            </div>
+        </div>
+        <ul>
+        
+    </div>
+</body>
+</html>
+
+>>>>>>> a2
