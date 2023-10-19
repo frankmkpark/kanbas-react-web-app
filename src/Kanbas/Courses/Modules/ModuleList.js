@@ -30,13 +30,14 @@ function Modules() {
                 <button className="btn btn-danger">
                     <FontAwesomeIcon icon={faPlus} />&nbsp;&nbsp;Module
                 </button>
-                <button className="btn btn-secondary custom-btn" style={{ width: '0.8cm' }}>
+                <button className="btn btn-secondary " style={{ width: '0.8cm' }}>
                     <b>⋮</b>
                 </button>
             </div>
+            <hr />
             <br />
 
-            <ul className="list-group">
+            <ul className="list-group" style={{width: '600px'}}>
                 {
                     modules
                         .filter(module => module.course === courseId)
@@ -50,15 +51,16 @@ function Modules() {
                                         {module.name}
                                         <div>
                                             <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#00a600' }} />
-                                            &nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;
                                             {expandedModules[index] ? '-' : '+'}
-                                            &nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;
                                             <FontAwesomeIcon icon={faEllipsisV} style={{ color: '#787878' }} />
                                         </div>
                                     </div>
                                 </li>
 
-                                {expandedModules[index] && module.lessons && module.lessons.map((lesson, lessonIndex) => (
+
+                            {expandedModules[index] && module.lessons && module.lessons.map((lesson, lessonIndex) => (
                                     <li key={lessonIndex} className="list-group-item ms-3">
                                         <div className="flex-container">
                                             {lesson.name}
@@ -77,6 +79,5 @@ function Modules() {
         </div>
     );
 }
-
 
 export default Modules;
