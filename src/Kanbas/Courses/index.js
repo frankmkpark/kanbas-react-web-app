@@ -1,18 +1,13 @@
 import React from "react";
-import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom"; // Merged the Link import here
 // import JsonPre from "../../Labs/a3/JsonPre";
 import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
-// import Assignments from "./Assignments";
-// import AssignmentEditor from "./Assignments/AssignmentEditor";
-// import Grades from "./Grades";import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
-import ModuleList from "./Modules/ModuleList";
-
-
-
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/AssignmentEditor";
+import Grades from "./Grades";
 
 function Courses() {
     const { courseId } = useParams();
@@ -27,8 +22,6 @@ function Courses() {
 
     return (
         <div>
-
-            {/* <h1>Courses {course.name} / {screen}</h1> */}
             <Link to={`/Kanbas/Courses/${courseId}`} style={{ color: "red", marginLeft: "10px" }}>{course.name}</Link>
             <span style={separatorStyle}> &gt; </span>
             <Link to={pathname} style={{ color: "black" }}>{screen}</Link>
@@ -46,12 +39,12 @@ function Courses() {
                         <Route path="/" element={<Navigate to="Home" />} />
                         <Route path="Home" element={<Home />} />
                         <Route path="Modules" element={<Modules />} />
-                        {/* <Route path="Assignments" element={<Assignments />} />
+                        <Route path="Assignments" element={<Assignments />} />
                         <Route
                             path="Assignments/:assignmentId"
                             element={<AssignmentEditor />}
                         />
-                        <Route path="Grades" element={<Grades />} /> */}
+                        <Route path="Grades" element={<Grades />} />
                     </Routes>
                 </div>
             </div>

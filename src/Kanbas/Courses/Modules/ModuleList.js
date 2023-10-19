@@ -20,9 +20,9 @@ function Modules() {
     return (
         <div>
             <div style={{ textAlign: 'left' }}>
-                <button className="btn btn-secondary custom-btn">Collapse All</button>
-                <button className="btn btn-secondary custom-btn">View Progress</button>
-                <select className="btn btn-secondary custom-btn">
+                <button className="btn btn-secondary custom-btn" style={{height: '35px'}}>Collapse All</button>
+                <button className="btn btn-secondary custom-btn" style={{width: '4cm', height: '35px'}}>View Progress</button>
+                <select className="btn btn-secondary custom-btn" style={{height: '35px'}}>
                     <option>Publish All</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
@@ -30,7 +30,7 @@ function Modules() {
                 <button className="btn btn-danger">
                     <FontAwesomeIcon icon={faPlus} />&nbsp;&nbsp;Module
                 </button>
-                <button className="btn btn-secondary " style={{ width: '0.8cm' }}>
+                <button className="btn btn-secondary " style={{ width: '0.8cm', height: '35px' }}>
                     <b>⋮</b>
                 </button>
             </div>
