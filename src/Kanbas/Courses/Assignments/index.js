@@ -35,13 +35,10 @@ function Assignments() {
         <li className="list-group-item list-group-item-secondary custom-grey-bg">
           <div className="flex-container">
             <b>Assignments</b>
-            <div>
-              <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#00a600' }} />
-              &nbsp;&nbsp;&nbsp;
-              <FontAwesomeIcon icon={faEllipsisV} style={{ color: '#787878' }} />
-            </div>
           </div>
         </li>
+      </ul>
+      <ul className="list-group" style={{width: '700px'}}>
         {courseAssignments.map((assignment) => (
           <li className="list-group-item" key={assignment._id}>
             <div className="flex-container">
