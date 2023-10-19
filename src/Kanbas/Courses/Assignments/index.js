@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
-import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faCheckCircle, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import './index.css';
+
 
 function Assignments() {
   const { courseId } = useParams();
@@ -14,31 +15,35 @@ function Assignments() {
 
   return (
     <div>
-          <div className="flex-container" style={{ textAlign: "left" }}>
-              <input type="text" placeholder="Search for Assignment..." style={{ height: "35px" }} />
-              <div style={{ display: "flex", textAlign: "right" }}>
-                  <button className="btn btn-secondary custom-btn" style={{ height: "35px" }}>
-                      <div className="fas fa-plus"> + Group</div>
-                  </button>
-                  <button className="btn btn-danger" style={{ height: "35px" }}>
-                      <i className="fas fa-plus"></i>&nbsp;&nbsp;Assignment
-                  </button>
-                  <button className="btn btn-secondary custom-btn" style={{ width: "0.8cm", height: "35px" }}>
-                      <b>⋮</b>
-                  </button>
-              </div>
-          </div>
+        <h2>Assignments for course {courseId}</h2>
+        <br />
+        <div className="flex-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <input type="text" placeholder="Search for Assignment..." style={{ height: "35px"}} />
+            <div style={{ display: "flex", marginLeft: '10px' }}>
+                <button className="btn btn-secondary custom-btn" style={{ height: "35px", marginRight: '5px' }}>
+                    <i className="fas fa-plus"></i> + Group
+                </button>
+                
+                <button className="btn btn-danger" style={{ height: "35px", marginRight: '5px' }}>
+                    <i className="fas fa-plus"></i> Assignment
+                </button>
+                
+                <button className="btn btn-secondary custom-btn" style={{ width: "0.8cm", height: "35px", marginRight: '5px' }}>
+                    <b>⋮</b>
+                </button>
+            </div>
+        </div>
       <div style={{ textAlign: "left" }}>
       </div>
       <hr />
-      <ul className="list-group" style={{width: '700px'}}>
+      <ul className="list-group" style={{flex: '1'}}>
         <li className="list-group-item list-group-item-secondary custom-grey-bg">
           <div className="flex-container">
             <b>Assignments</b>
           </div>
         </li>
       </ul>
-      <ul className="list-group" style={{width: '700px'}}>
+      <ul className="list-group" style={{flex: '1'}}>
         {courseAssignments.map((assignment) => (
           <li className="list-group-item" key={assignment._id}>
             <div className="flex-container">

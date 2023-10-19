@@ -12,9 +12,7 @@
     color: inherit; 
   }
   
-  
   .custom-btn {
-
     background-color: lightgray;
     color: black;
   }
@@ -23,13 +21,7 @@
     background-color:   #eceff1 
   }
   
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
+
   .btn-consistent-width {
     width: 250px; 
     text-align: left;
@@ -43,13 +35,19 @@
     background-color: lightgray;
 }
 
-.module-actions {
+.module-icons {
   display: flex;
   align-items: center;
 }
 
 
-.module-actions {
-    display: flex;
-    align-items: center;
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module-icons {
+  display: flex;
+  align-items: center;         
 }

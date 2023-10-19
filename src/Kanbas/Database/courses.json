@@ -19,5 +19,12 @@
     "number": "RS4570",
     "startDate": "2023-01-10",
     "endDate": "2023-05-15"
+  },
+  {
+  "_id": "RS104",
+  "name": "Sample Study",
+  "number": "RS4590",
+  "startDate": "2023-01-10",
+  "endDate": "2023-05-15"
   }
 ]
