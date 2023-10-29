@@ -1,0 +1,7 @@
+.table tbody tr:nth-child(odd) {
+    background-color: red;
+}
+
+.grade-cell, .table th:not(:first-child) {
+    text-align: center;
+}

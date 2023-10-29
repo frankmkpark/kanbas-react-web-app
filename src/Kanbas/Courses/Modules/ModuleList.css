@@ -1,0 +1,53 @@
+.custom-indent {
+    padding-left: 20px;
+  }
+  
+  .my-link {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: inherit; 
+  }
+  
+  .custom-btn {
+    background-color: lightgray;
+    color: black;
+  }
+  
+  .custom-grey-bg {
+    background-color:   #eceff1 
+  }
+  
+
+  .btn-consistent-width {
+    width: 250px; 
+    text-align: left;
+  }
+  
+  .smaller-text {
+    font-size: 14px;
+  }
+
+  .lightgray-btn {
+    background-color: lightgray;
+}
+
+.module-icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module-icons {
+  display: flex;
+  align-items: center;         
+}

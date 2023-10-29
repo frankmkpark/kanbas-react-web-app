@@ -1,0 +1,36 @@
+.custom-btn {
+  width: 120px;
+  height: 30px;
+}
+
+.custom-grey-bg {
+  background-color:   #eceff1   ;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.checkbox-container {
+  border: 1px solid lightgray;
+  width: 300px; 
+  font-size: 1em; 
+  float: left;
+}
+
+input[type="checkbox"] {
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+
+ .custom-btn {
+
+    background-color: lightgray;
+    color: black;
+  }
+
+
+  

@@ -1,0 +1,22 @@
+.content-padding {
+    padding-left: 20px;
+}
+
+.wd-grid-container,
+.wd-grid-col-main-content {
+  width: 100%;
+}
+
+hr {
+    width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.flex-item {
+  margin: 20px;
+}

@@ -1,0 +1,14 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    margin-right: 10px;  /* Adjust this value to increase/decrease spacing */
+}
