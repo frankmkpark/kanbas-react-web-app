@@ -1,6 +1,5 @@
 import React from "react";
-import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom"; // Merged the Link import here
-// import JsonPre from "../../Labs/a3/JsonPre";
+import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom";
 import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -9,11 +8,11 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }) {
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const [empty, kanbas, courses, id, screen] = pathname.split("/");
-    const course = db.courses.find((course) => course._id === courseId);
+    const [empty, kanbas, courseSegments, id, screen] = pathname.split("/");
+    const course = courses.find((course) => course._id === courseId);
 
     const separatorStyle = {
         color: "gray",
@@ -48,7 +47,6 @@ function Courses() {
                     </Routes>
                 </div>
             </div>
-
         </div>
     );
 }

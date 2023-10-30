@@ -51,3 +51,18 @@
   display: flex;
   align-items: center;         
 }
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  padding: 8px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+}
