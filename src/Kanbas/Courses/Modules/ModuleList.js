@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faCheckCircle, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import './ModuleList.css';
-import db from '../../Database';
+import { createModule, deleteModule, updateModule, findModulesForCourse } from "./client";
+import { addModule as addModuleRedux, deleteModule as deleteModuleRedux, updateModule as updateModuleRedux, setModules } from "./modulesReducer";
 
 function Modules() {
   const { courseId } = useParams();
-  const [modules, setModules] = useState(db.modules);
+  const dispatch = useDispatch();
+  const modules = useSelector(state => state.modulesReducer.modules);
+
   const [expandedModules, setExpandedModules] = useState({});
   const [module, setModule] = useState({
     name: "New Module",
@@ -15,13 +19,10 @@ function Modules() {
     course: courseId,
   });
 
-  const addModule = () => {
-    const newModule = { ...module, _id: new Date().getTime().toString() };
-    setModules([...modules, newModule]);
-  };
-
-  const deleteModule = (moduleId) => {
-    setModules(modules.filter((m) => m._id !== moduleId));
+  const handleAddModule = () => {
+    createModule(courseId, module)
+      .then(newModule => dispatch(addModuleRedux(newModule)))
+      .catch(error => console.error("Error adding module:", error));
   };
 
   const editModule = (moduleId) => {
@@ -31,21 +32,16 @@ function Modules() {
     }
   };
 
-  const updateModule = () => {
-    setModules((prevModules) =>
-      prevModules.map((m) => {
-        if (m._id === module._id) {
-          return module;
-        } else {
-          return m;
-        }
-      })
-    );
-    setModule({
-      name: "New Module",
-      description: "New Description",
-      course: courseId,
-    });
+  const handleDeleteModule = (moduleId) => {
+    deleteModule(moduleId)
+      .then(() => dispatch(deleteModuleRedux(moduleId)))
+      .catch(error => console.error("Error deleting module:", error));
+  };
+
+  const handleUpdateModule = () => {
+    updateModule(module)
+      .then(updatedModule => dispatch(updateModuleRedux(updatedModule)))
+      .catch(error => console.error("Error updating module:", error));
   };
 
   const toggleModule = (index) => {
@@ -55,8 +51,15 @@ function Modules() {
     }));
   };
 
+  useEffect(() => {
+    console.log("courseId:", courseId);
+    findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)))
+      .catch(error => console.error("Error fetching modules:", error));
+  }, [courseId, dispatch]);
+
   const customBtnStyle = { height: '35px' };
-  const buttonDimensions = { width: '0.8cm', height: '35px' };
+  // const buttonDimensions = { width: '0.8cm', height: '35px' };
   const checkIconStyle = { color: '#00a600' };
   const ellipsisIconStyle = { color: '#787878' };
 
@@ -74,7 +77,7 @@ function Modules() {
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <button className="btn btn-danger" onClick={addModule}>
+        <button className="btn btn-danger" onClick={handleAddModule}>
           <FontAwesomeIcon icon={faPlus} />&nbsp;Module
         </button>
       </div>
@@ -98,15 +101,15 @@ function Modules() {
             />
             {module._id ? (
               <>
-                <button className="btn btn-secondary" onClick={updateModule}>
+                <button className="btn btn-secondary" onClick={handleUpdateModule}>
                   Update
                 </button>
-                <button className="btn btn-danger" onClick={() => deleteModule(module._id)}>
+                <button className="btn btn-danger" onClick={() => handleDeleteModule(module._id)}>
                   Delete
                 </button>
               </>
             ) : (
-              <button className="btn btn-secondary" onClick={addModule}>
+              <button className="btn btn-secondary" onClick={handleAddModule}>
                 Add
               </button>
             )}
@@ -115,7 +118,7 @@ function Modules() {
         {modules
           .filter((m) => m.course === courseId)
           .map((m, index) => (
-            <React.Fragment key={m._id}>
+            <React.Fragment key={m._id}> {/* Added key prop */}
               <li
                 className="list-group-item list-group-item-light custom-grey-bg"
                 onClick={() => toggleModule(index)}

@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom";
 import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
@@ -8,12 +10,22 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses({ courses }) {
+function Courses() {
+    const URL = "http://localhost:4000/api/courses";
     const { courseId } = useParams();
     const { pathname } = useLocation();
     const [empty, kanbas, courseSegments, id, screen] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
-
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+      const response = await axios.get(
+        `${URL}/${courseId}`
+      );
+      setCourse(response.data);
+    };  
+    useEffect(() => {
+        findCourseById(courseId);
+      }, [courseId]);
+    
     const separatorStyle = {
         color: "gray",
         margin: "0 5px",
