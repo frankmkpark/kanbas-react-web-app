@@ -9,9 +9,9 @@ import { addModule as addModuleRedux, deleteModule as deleteModuleRedux, updateM
 
 function Modules() {
   const { courseId } = useParams();
+  // const courseId = 'RS101'
   const dispatch = useDispatch();
   const modules = useSelector(state => state.modulesReducer.modules);
-
   const [expandedModules, setExpandedModules] = useState({});
   const [module, setModule] = useState({
     name: "New Module",
@@ -19,14 +19,33 @@ function Modules() {
     course: courseId,
   });
 
-  const handleAddModule = () => {
-    createModule(courseId, module)
-      .then(newModule => dispatch(addModuleRedux(newModule)))
-      .catch(error => console.error("Error adding module:", error));
+ console.log(modules);
+ console.log(courseId);
+ console.log(module);
+
+  // Function to handle adding or updating a module
+  const handleAddOrUpdateModule = () => {
+    const newModule = {
+      name: module.name,
+      description: module.description,
+      course: courseId
+    };
+  
+    if (module._id) {
+      // Update existing module
+      updateModule(module)
+        .then(updatedModule => dispatch(updateModuleRedux(updatedModule)))
+        .catch(error => console.error("Error updating module:", error));
+    } else {
+      // Add new module
+      createModule(courseId, newModule)
+        .then((createdModule) => dispatch(addModuleRedux(createdModule)))
+        .catch((error) => console.error("Error adding module:", error));
+    }
   };
 
   const editModule = (moduleId) => {
-    const selectedModule = modules.find((m) => m._id === moduleId);
+    const selectedModule = modules.find((m) => m._id.$oid === moduleId);
     if (selectedModule) {
       setModule(selectedModule);
     }
@@ -37,13 +56,7 @@ function Modules() {
       .then(() => dispatch(deleteModuleRedux(moduleId)))
       .catch(error => console.error("Error deleting module:", error));
   };
-
-  const handleUpdateModule = () => {
-    updateModule(module)
-      .then(updatedModule => dispatch(updateModuleRedux(updatedModule)))
-      .catch(error => console.error("Error updating module:", error));
-  };
-
+  
   const toggleModule = (index) => {
     setExpandedModules((prevState) => ({
       ...prevState,
@@ -52,38 +65,34 @@ function Modules() {
   };
 
   useEffect(() => {
-    console.log("courseId:", courseId);
     findModulesForCourse(courseId)
       .then((modules) => dispatch(setModules(modules)))
-      .catch(error => console.error("Error fetching modules:", error));
+      .catch((error) => console.error("Error fetching modules:", error));
   }, [courseId, dispatch]);
-
-  const customBtnStyle = { height: '35px' };
-  // const buttonDimensions = { width: '0.8cm', height: '35px' };
-  const checkIconStyle = { color: '#00a600' };
-  const ellipsisIconStyle = { color: '#787878' };
 
   return (
     <div>
+      {/* Header and buttons */}
       <div className="module-header">
-        <button className="btn btn-light custom-btn" style={customBtnStyle}>
+        <button className="btn btn-light custom-btn" style={{ height: '35px' }}>
           Collapse All
         </button>
-        <button className="btn btn-light custom-btn" style={{ width: '4cm', ...customBtnStyle }}>
+        <button className="btn btn-light custom-btn" style={{ width: '4cm', height: '35px' }}>
           View Progress
         </button>
-        <select className="btn btn-light custom-btn" style={customBtnStyle}>
+        <select className="btn btn-light custom-btn" style={{ height: '35px' }}>
           <option>Publish All</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <button className="btn btn-danger" onClick={handleAddModule}>
+        <button className="btn btn-danger" onClick={handleAddOrUpdateModule}>
           <FontAwesomeIcon icon={faPlus} />&nbsp;Module
         </button>
       </div>
       <hr />
       <br />
 
+      {/* Module input fields */}
       <ul className="list-group module-list">
         <li className="list-group-item">
           <div className="input-container">
@@ -99,26 +108,21 @@ function Modules() {
               onChange={(e) => setModule({ ...module, description: e.target.value })}
               placeholder="New Description"
             />
-            {module._id ? (
-              <>
-                <button className="btn btn-secondary" onClick={handleUpdateModule}>
-                  Update
-                </button>
-                <button className="btn btn-danger" onClick={() => handleDeleteModule(module._id)}>
-                  Delete
-                </button>
-              </>
-            ) : (
-              <button className="btn btn-secondary" onClick={handleAddModule}>
-                Add
+            <button className="btn btn-secondary" onClick={handleAddOrUpdateModule}>
+              {module._id ? "Update" : "Add"}
+            </button>
+            {module._id && (
+              <button className="btn btn-danger" onClick={() => handleDeleteModule(module._id)}>
+                Delete
               </button>
             )}
           </div>
         </li>
+
         {modules
-          .filter((m) => m.course === courseId)
+          .filter((m) => m.course === courseId.toString())
           .map((m, index) => (
-            <React.Fragment key={m._id}> {/* Added key prop */}
+            <React.Fragment key={m._id}>
               <li
                 className="list-group-item list-group-item-light custom-grey-bg"
                 onClick={() => toggleModule(index)}
@@ -126,11 +130,11 @@ function Modules() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div style={{ flexGrow: 1 }}>{m.name}</div>
                   <div>
-                    <FontAwesomeIcon icon={faCheckCircle} style={checkIconStyle} />
+                    <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#00a600' }} />
                     &nbsp;&nbsp;
                     {expandedModules[index] ? '-' : '+'}
                     &nbsp;&nbsp;
-                    <FontAwesomeIcon icon={faEllipsisV} style={ellipsisIconStyle} />
+                    <FontAwesomeIcon icon={faEllipsisV} style={{ color: '#787878' }} />
                   </div>
                   <button className="btn btn-light" onClick={() => editModule(m._id)}>
                     Edit

@@ -29,7 +29,9 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   //     })
   //   );
   // };
-  
+  console.log(courses);
+  courses.map(course => console.log(course._id));
+
   return (
     <div className="wd-grid-container">
       <div className="wd-grid-col-main-content content-padding">
@@ -46,21 +48,19 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
       <button onClick={addNewCourse} className="btn btn-primary">
         Add
       </button>
-      <button onClick={updateCourse} className="btn btn-primary">
-        Update
-      </button>
+      <button onClick={() => updateCourse(course)} className="btn btn-primary">Update</button>
         <hr />
         <h2>Published Courses ({courses.length})</h2>
         <hr />
         <div className="flex-container">
-          {courses.map((course, index) => (
-            <div className="flex-item">
-              <div className="card" style={{ width: '260px', marginTop: '35px' }}>                
+        {courses.map((course) => (
+          <div key={course._id.$oid} className="flex-item">     
+            <div className="card" style={{ width: '260px', marginTop: '35px' }}>                
               <img src="/images/blue-1.png" className="card-img-top" alt="course-thumbnail" />
                 <div className="card-body">
                   <h5 className="card-title" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                     <Link 
-                      to={`/Kanbas/Courses/${course._id}`} 
+                      to={`/Kanbas/Courses/${course._id.$oid}`} 
                       style={{ textDecoration: 'none', color: '#3498db' }}
                     >
 

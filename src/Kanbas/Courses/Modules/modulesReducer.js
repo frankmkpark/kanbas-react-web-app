@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import db from "../../Database";
+import db from "../../Database";
 
 const initialState = {
   modules: [],
@@ -15,15 +15,15 @@ const modulesSlice = createSlice({
     setModules: (state, action) => {
       state.modules = action.payload;
     },
-    // addModule: (state, action) => {
-    //   state.modules = [
-    //     { ...action.payload, _id: new Date().getTime().toString() },
-    //       ...state.modules,
-    //   ];
-    // },
     addModule: (state, action) => {
-      state.modules = [action.payload, ...state.modules];
+      state.modules = [
+        { ...action.payload, _id: new Date().getTime().toString() },
+          ...state.modules,
+      ];
     },
+    // addModule: (state, action) => {
+    //   state.modules = [action.payload, ...state.modules];
+    // },
 
     deleteModule: (state, action) => {
       state.modules = state.modules.filter(

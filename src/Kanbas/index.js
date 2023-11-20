@@ -17,6 +17,7 @@ function Kanbas() {
     setCourses(response.data);
   };
   useEffect(() => {
+    console.log("Courses updated:", courses);
     findAllCourses();
   }, []);
 
@@ -45,8 +46,10 @@ function Kanbas() {
 
   const updateCourse = async (courseToUpdate) => {
     try {
-      const response = await axios.put(`${URL}/${courseToUpdate._id}`, courseToUpdate);  
-      setCourses(courses.map((c) => c._id === response.data._id ? response.data : c));
+      const response = await axios.put(`${URL}/${courseToUpdate._id.$oid}`, courseToUpdate);
+      setCourses(courses.map((course) => 
+        course._id.$oid === courseToUpdate._id.$oid ? response.data : course
+      ));
     } catch (error) {
       console.error("Error updating course:", error);
     }
