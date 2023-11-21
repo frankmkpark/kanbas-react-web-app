@@ -1,15 +1,5 @@
-.wd-kanbas-navigation {
-  background-color: black;
-  list-style: none;
-  padding: 0px;
-  width: 90px;
-  margin: 0px;
-  min-height: 100vh;
-}
-
 .wd-kanbas-navigation .wd-icon {
   font-size: 2em;
-  color: red;
 }
 
 .wd-kanbas-navigation .list-group-item:first-child,
@@ -19,22 +9,59 @@
   border-radius: 0px;
 }
 
+.wd-kanbas-navigation {
+  background-color: black;
+  list-style: none;
+  padding: 0px;
+  width: 80px;
+  margin: 0px;
+}
+
 .wd-kanbas-navigation a {
   padding: 10px;
   margin-bottom: 10px;
-  font-size: 0.85em;
+  font-size: 0.8em;
   text-align: center;
   background-color: black;
   border: none;
-  color: white;
-  text-decoration: none;
 }
 
 .wd-kanbas-navigation a.active {
   background-color: white;
+}
+
+.wd-kanbas-navigation a.active {
   color: red;
 }
 
-.wd-kanbas-navigation a.active .wd-icon {
+.wd-icon {
+  color: red;
+}
+
+.wd-white-icon {
+  color: grey;
+}
+
+
+
+.wd-kanbas-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.wd-kanbas-navigation a i {
+  color: red;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.list-group-item {
+  color: white;
+  /* 设置默认文本颜色为白色 */
+  padding: 5px 10px;
+}
+
+.list-group-item.active {
+  background-color: black;
   color: red;
 }

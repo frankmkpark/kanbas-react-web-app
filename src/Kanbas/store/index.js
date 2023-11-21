@@ -3,10 +3,11 @@ import modulesReducer from "../Courses/Modules/modulesReducer";
 import assignmentsReducer from "../Courses/Assignments/assignmentsReducer";
 
 const store = configureStore({
-  reducer: {
-    modulesReducer,
-    assignmentsReducer
-  }
+    reducer: {
+        modulesReducer,
+        assignmentsReducer
+    }
 });
+
 
 export default store;
