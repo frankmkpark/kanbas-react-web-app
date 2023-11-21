@@ -70,27 +70,16 @@ function Assignments() {
                             <span class="icon"><BiPlus /></span>
                             <span class="icon"><BiDotsVertical /></span>
                         </div>
-
-
                     </a>
                     <div className="list-group">
                         {courseAssignments.map((assignment) => (
-                            // <Link
-                            //     key={assignment._id}
-                            //     to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                            //     className="list-group-item">
-                            //     {assignment.title}
-
-                            // </Link>
                             <li className="list-group-item" key={assignment._id}>
                                 <div className="flex-container">
-                                    {/* <i className="far fa-list-alt" style={{ color: "#00b900", marginRight: "20px" }}></i> */}
                                     <div style={{ flex: 1 }}>
                                         <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: "black" }}>
                                             <b>{assignment.title}</b>
                                         </Link>
                                         <br />
-
                                     </div>
                                     <div>
                                         <button

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
 import {
     updateAssignment,
     addAssignment,
 } from "./assignmentsReducer";
-
 function AssignmentEditor() {
     const { assignmentId, courseId } = useParams();
     const dispatch = useDispatch();
@@ -16,7 +14,6 @@ function AssignmentEditor() {
     const assignment = assignments.find(
         (assignment) => assignment._id === assignmentId
     );
-
     const navigate = useNavigate();
     const [editedTitle, setEditedTitle] = useState("");
     const [editedDescription, setEditedDescription] = useState("");
@@ -25,7 +22,6 @@ function AssignmentEditor() {
     const [editedDueDate, setEditedDueDate] = useState("");
     const [editedAvailableFrom, setEditedAvailableFrom] = useState("");
     const [editedUntil, setEditedUntil] = useState("");
-
     useEffect(() => {
         if (assignment) {
             setEditedTitle(assignment.title);
@@ -37,7 +33,6 @@ function AssignmentEditor() {
             setEditedUntil(assignment.until);
         }
     }, [assignment]);
-
     const handleSave = () => {
         const updatedAssignment = {
             _id: assignmentId,
@@ -50,16 +45,13 @@ function AssignmentEditor() {
             until: editedUntil,
             course: courseId,
         };
-
         if (assignment) {
             dispatch(updateAssignment(updatedAssignment));
         } else {
             dispatch(addAssignment(updatedAssignment));
         }
-
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
-
     return (
         <div>
             <hr />

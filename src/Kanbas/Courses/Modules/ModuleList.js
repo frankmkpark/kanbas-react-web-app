@@ -14,8 +14,6 @@ import { findModulesForCourse, createModule } from "./client";
 import * as client from "./client";
 function ModuleList() {
     const { courseId } = useParams();
-    // const [modules, setModules] = useState(db.modules);
-    // const modules = db.modules;
     const buttonGroupStyle = {
         marginRight: '-5px',
     };
@@ -41,44 +39,9 @@ function ModuleList() {
         const status = await client.updateModule(module);
         dispatch(updateModule(module));
     };
-
-
-
-
-    // const [module, setModule] = useState({
-    //     name: "New Module",
-    //     description: "New Description",
-    //     course: courseId,
-    // });
-    // const addModule = (module) => {
-    //     setModules([
-    //         { ...module, _id: new Date().getTime().toString() },
-    //         ...modules,
-    //     ]);
-    // };
-    // const deleteModule = (moduleId) => {
-    //     setModules(modules.filter(
-    //         (module) => module._id !== moduleId));
-    // };
-    // const updateModule = () => {
-    //     setModules(
-    //         modules.map((m) => {
-    //             if (m._id === module._id) {
-    //                 return module;
-    //             } else {
-    //                 return m;
-    //             }
-    //         })
-    //     );
-    // }
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
-
-
-
-
-
     return (
         <div style={{ marginRight: '20px' }}>
             <div className="btn-group" style={buttonGroupStyle}>
@@ -101,17 +64,6 @@ function ModuleList() {
                 <button className="btn btn-light btn-sm"><BiDotsVertical /></button>
             </div>
             <hr />
-
-            {/* <div class="list-group mb-4">
-                <a href="#" class="list-group-item list-group-item-secondary">Resources</a><br />
-                <a href="#" class="list-group-item list-group-item-secondary">Required Textbook</a> <br />
-
-
-                <a href="#" class="list-group-item list-group-item-secondary">Week 0 - INTRO</a> <br />
-                <a href="#" class="list-group-item list-group-item-secondary">Week 1 - HTML</a><br />
-            </div> */}
-
-
             <ul className="list-group">
                 <li className="list-group-item">
 
@@ -126,7 +78,6 @@ function ModuleList() {
                     </button>
 
                     <button
-                        // onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
                         onClick={handleAddModule}>
                         Add
                     </button>
@@ -138,49 +89,23 @@ function ModuleList() {
                         } />
 
                 </li>
-
-
                 {
                     modules
                         .filter((module) => module.course === courseId)
                         .map((module, index) => (
-                            // <li key={index} className="list-group-item">
                             <li key={index} className="list-group-item list-group-item-secondary" style={{ marginBottom: "40px" }
-
                             }>
-
                                 <button
                                     onClick={() => dispatch(setModule(module))}>
                                     Edit
                                 </button>
-
                                 <button
-                                    // onClick={() => dispatch(deleteModule(module._id))}>
                                     onClick={() => handleDeleteModule(module._id)}
                                 >
                                     Delete
                                 </button>
-
-
                                 <h4>{module.name}</h4>
-
                                 <p>{module.description}</p>
-                                {/* <div className="list-group-item">
-                                    {
-                                        module.lessons && (
-                                            <ul className="list-group">
-                                                {
-                                                    module.lessons.map((lesson, index) => (
-                                                        <li key={index} className="list-group-item">
-                                                            <h4>{lesson.name}</h4>
-                                                            <p>{lesson.description}</p>
-                                                        </li>
-                                                    ))
-                                                }
-                                            </ul>
-                                        )
-                                    }
-                                </div> */}
                             </li>
 
                         ))

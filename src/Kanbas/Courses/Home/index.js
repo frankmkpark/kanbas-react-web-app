@@ -34,7 +34,7 @@ function Home() {
                     <hr />
                     <div className="item">
                         Lecture<br />
-                        CS4550.23123.23123<br />
+                        CS4550.12323.23123<br />
                         Sep 5 at 11:45am<br />
                     </div>
                     <br />
@@ -46,7 +46,7 @@ function Home() {
                     <br />
                     <div className="item">
                         Lecture<br />
-                        CS5610.23211.32313<br />
+                        CS5610.23123.32313<br />
                         Sep 6 at 12:45pm<br />
                     </div>
                 </div>
