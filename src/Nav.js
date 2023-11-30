@@ -13,6 +13,8 @@ function Nav() {
        Hello</Link>
      <Link className="nav-link" to="/Kanbas">
        Kanbas</Link>
+     <Link className="nav-link" to="/Project">
+       Project</Link>
    </nav>
  );
 }
