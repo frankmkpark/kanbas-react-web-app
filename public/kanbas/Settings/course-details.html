@@ -1,285 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="../../vendors/fontawesome-free-5.15.4-web/css/all.css">
+        <link href="https://cdn.jsdelivr.net/npm/font-awesome@6.4.2/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="course-details.css">
+        
+    </head>
 <body>
-    <table width="100%">
-        <tr valign="baseline">
-            <td>
-                <ul>
-                    <li><a href="../Profile/account.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../Home/index-courses.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+    <div style ="display: flex">
+        <div style="flex-basis: 7%">
+            <ul class="wd-kanbas-navigation">
+                    <li>
+                        <img src="../NEU.png" height="80px" width="80px">
+                    </li>
+                    <li>
+                        <a href="../Profile/index.html" id="accountLink">
+                            <i class="fas fa-user-circle fa-lg" style="color:lightgray"></i><br>
+                            Account
+                        </a>                
+                    </li>
+                    <li>
+                        <a href="../Dashboard/dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i><br>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="wd-active">
+                        <a href="../Courses/index.html">
+                            <i class="fa fa-solid fa-book"></i><br>
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-calendar" aria-hidden="true"></i><br>
+                            Calendar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-inbox"></i><br>
+                            Inbox
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-history"></i><br>
+                            History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tv"></i><br>
+                            Studio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-question-circle"></i><br>
+                            Help
+                        </a>
+                    </li>
                 </ul>
-            </td>
-            <td colspan="4">
-                <ul>
-                    <li><a href="../Home/home.html">Home</a></li>
+            </div>
+            <div style="flex-basis: 20%; display: flex; flex-direction: column;">
+                <div class="center-container">
+                    <br>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb" style="background-color: transparent;">
+                            <li class="breadcrumb-item"><a href="#" style="color: red;">CS5610 12531 202132</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" style="color:black">Home</li>
+                        </ol>
+                    </nav>
+                </div>
+                <hr style="width: 400%">
+                <ul class="wd-course-navigation">
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Modules</a></li>
                     <li><a href="#">Piazza</a></li>
                     <li><a href="#">Zoom Meetings</a></li>
                     <li><a href="../Assignments/index.html">Assignments</a></li>
                     <li><a href="#">Quizzes</a></li>
-                    <li><a href="../Grades/grades.html">Grades</a></li>
+                    <li><a href="../Grades/index.html">Grades</a></li>
                     <li><a href="#">People</a></li>
                     <li><a href="#">Panopto Video</a></li>
                     <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcement</a></li>
+                    <li><a href="#">Announcements</a></li>
                     <li><a href="#">Pages</a></li>
                     <li><a href="#">Files</a></li>
                     <li><a href="#">Rubrics</a></li>
                     <li><a href="#">Outcomes</a></li>
                     <li><a href="#">Collaborations</a></li>
                     <li><a href="#">Syllabus</a></li>
-                    <li><a href="./course-details.html">Settings</a></li>
+                    <li class="wd-active"><a href="../Settings/course-details.html"><b>Settings</b></a></li>
                 </ul>
-            </td>
-            <td>
-                <button onclick="window.location.href='course-details.html'">Course Details</button>
-                <button>Sections</button>
-                <button onclick="window.location.href='navigation.html'">Navigation</button>
-                <button>Apps</button>
-                <button>Feature Options</button>
-                <button>Integrations</button>
-                <br />
-                <h2>Course Details</h2>
-                <table widht="100%">
-                    <tr>
-                        <td>
-                            <b>Image:</b>
-                        </td>
-                        <td>
-                            <div style="width: 200px; height: 100px; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">
-                                <button style="padding: 10px 20px; cursor: pointer;">
-                                    Click me
-                                </button>
+            </div>
+            <div style="flex-basis: 60%; margin-top: 130px;">                    
+                <div class="float-end" style="text-align: right">
+                    <button class="btn btn-secondary custom-btn">Collapse All</button>
+                    <button class="btn btn-secondary custom-btn">View Progress</button>
+                    <select class="btn btn-secondary custom-btn">
+                        <option>Publish All</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                    <button class="btn btn-danger custom-btn"><i class="fas fa-plus"></i>&nbsp;&nbsp;Module</button>
+                    <button class="btn btn-secondary" style="width:0.8cm"><b>⋮</b></button>
+                </div><br>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link" id="black" href="#">Course Details</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sections</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="navigation.html">Navigation</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feature Options</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Integrations</a>
+                    </li>
+                  </ul>
+                  <br /><br /> 
+
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Image:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <form action="/upload_endpoint" method="post" enctype="multipart/form-data">
+                                        <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+                                        <input type="submit" value="Upload Image">
+                                    </form>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Name:</b>
-                        </td>
-                        <td>
-                            CS5610 12631 Web Development Fall 2023 (BOS-1-TR)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Course Code:</b>
-                        </td>
-                        <td>
-                            CS5610.12631.202410
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Blueprint Course:</b>
-                        </td>
-                        <td>
-                            No
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Course Template:</b>
-                        </td>
-                        <td>
-                            <input type="checkbox" value="TEMPLATE"
-                            id="chkbox-template"/>
-                            <label for="chkbox-template">Enable course as a Course Template</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Time Zone</b>
-                        </td>
-                        <td>
-                            <select style="width: 70%;">
-                               <option value="EST">Eastern Time (US & Canada) (-05:00/-04:00)</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>SIS ID:</b>
-                        </td>
-                        <td>
-                            CS5610.12631.202410
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Subaccount:</b>
-                        </td>
-                        <td>
-                            CS Grad 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Term</b>
-                        </td>
-                        <td>
-                            202410_1 Fall 2023 Semester Full Term 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Participation:</b>
-                        </td>
-                        <td>
-                            <select style="width: 70%;">
-                               <option value="Term">Term</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
-                            Course participation is limited to <b>term</b> start and end dates. 
-                        <h3>Start</h3>
-                        <input type="date"
-                        id="text-fields-start-date"><br>
-                        <h3>End</h3>
-                        <input type="date"
-                        id="text-fields-end-date"/><br/>     
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
-                            <input type="checkbox" value="TEMPLATE"
-                            id="chkbox-restrict-start"/>
-                            <label for="chkbox-restrict-start">Restrict students from viewing course before term start date</label><br/>
-                            <input type="checkbox" value="TEMPLATE"
-                            id="chkbox-restrict-end"/>
-                            <label for="chkbox-restrict-end">Restrict students from viewing course after term end date</label>
-                        <br><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <b>Default due time:</b>
-                        </td>
-                        <td>
-                            <select style="width: 70%;">
-                                <option value="defaultDue">Account default (11:59pm)</option>
-                            </select><br />
-                            This influences the user interface for setting due dates. It does not change the time due for any existing assignments.
-                            <br><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <b>Language:</b>
-                        </td>
-                        <td>
-                            <select style="width: 70%;">
-                                <option value="language">Not set (user-configurable, defaults to English (Unit))</option>
-                            </select><br />
-                            This will override any user/system language prferences. This is only recommended for foreign language courses.
-                            <br><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>File Storage:</b>
-                        </td>
-                        <td>
-                            1000 megabytes
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Large Course:</b>
-                        </td>
-                        <td>
-                            <input type="checkbox" value="largeCourse"
-                            id="chkbox-large-course"/>
-                            <label for="chkbox-large-course">Launch SpeedGrader Filtered by Student Group</label><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Grading Scheme:</b>
-                        </td>
-                        <td>
-                            <input type="checkbox" value="gradingScheme"
-                            id="chkbox-grading-scheme"/>
-                            <label for="chkbox-grading-scheme">Enable course grading scheme</label><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <b>License:</b>
-                        </td>
-                        <td>
-                            <select style="width: 70%;">
-                                <option value="license">Private (Coyrighted)</option>
-                            </select>
-                            <button>?</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>File Copyright:</b>
-                        </td>
-                        <td>
-                            <input type="checkbox" value="copyRight"
-                            id="chkbox-copy-right"/>
-                            <label for="chkbox-copy-right">Copyright and license information must be provided for files before they are published.</label><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <b>Format:</b>
-                        </td>
-                        <td>
-                            <select style="width: 70%;">
-                                <option value="on-campus">On-Campus</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Mastery Path:</b>
-                        </td>
-                        <td>
-                            <input type="checkbox" value="individualLearning"
-                            id="chkbox-individual-learning"/>
-                            <label for="chkbox-individual-learning">Enable individual learning paths for students based on assessment</label><br/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Descriptions:</b>
-                        </td>
-                        <td>
-                            <textarea cols="50" rows="10"></textarea>
-                            <br />
-                            more options
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td align="right">
-                            <button>Update Course Details</button>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Name:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        CS5610 12531 Web Development SEC 02 Fall 2023 [BOS-1-TR]
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Course Code:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        CS5610.12531.202132
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Blueprint Course:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        No
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Course Template:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <form>
+                                            <label>
+                                                <input type="checkbox" name="templateChoice" value="template1"> Enable course as
+                                                a
+                                                Course
+                                                Template
+                                            </label>
+                                        </form>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Time Zone:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <label for="timezone">Choose a time zone:</label>
+                                        <select id="timezone" name="timezone">
+                                            <option value="EST">Eastern Time(US & Canada)(-05:00/-04:00)</option>
+        
+                                        </select>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>SIS ID:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        CS5610.12531.202132
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Subaccount:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <a href="#">CS Undergrad</a>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Term:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <div>2023 Fall 2023 Semester Full Term</div>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Participation:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <select id="term" name="term">
+                                            <option value="Term">Term</option>
+                                        </select>
+                                        <div>Course participation is limited to <h5>term</h5> start and end dates.</div>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Participation:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <select id="term" name="term">
+                                            <option value="Term">Term</option>
+                                        </select>
+                                        <div>Course participation is limited to term start and end dates.</div>
+                                    </td>
+                                    <h4>Start</h4>
+                                    <input type="date" id="text-fields-dob" /><br />
+        
+                                    <h4>End</h4>
+                                    <input type="date" id="text-fields-dob" /><br />
+                                    <input type="checkbox" value="startdate" name="check-date" id="chkbox-startdate" />
+                                    <label for="chkbox-startdate">Restrict students from viewing course before term start
+                                        date</label>
+                                    <input type="checkbox" value="enddate" name="check-date" id="chkbox-enddate" />
+                                    <label for="chkbox-enddate">Restrict students from viewing course after term end
+                                        date</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Default due date:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <select id="time" name="time">
+                                            <option value="Time">Account default(11:59pm)</option>
+                                        </select>
+                                        <div>This influences the user interface for setting due dates. It does not change the
+                                            time
+                                            due for any existing assginments.</div>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Language:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <select id="language" name="language">
+                                            <option value="Language">Not set(User-configurable, defaults to English)</option>
+                                        </select>
+                                        <div>This will override any user/system language preferences. This is only recommended
+                                            for
+                                            foreign language
+                                            courses</div>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>File Storage:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <div>10000 megabytes</div>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Large Course:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <input type="checkbox" value="largecourse" name="check-largecourse"
+                                            id="chkbox-largecourse" />
+                                        <label for="chkbox-largecourse">Launch SpeedGrader Filtered by Student Group</label>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Grading Scheme:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <input type="checkbox" value="gradingscheme" name="check-gradingscheme"
+                                            id="chkbox-gradingscheme" />
+                                        <label for="chkbox-gradingscheme">Enable course grading scheme</label>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>License:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <select id="license" name="license">
+                                            <option value="license">Private(Copyrighted)</option>
+                                        </select>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>File Copyright:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <input type="checkbox" value="filecopyright" name="check-filecopyright"
+                                            id="chkbox-filecopyright" />
+                                        <label for="chkbox-filecopyright">Copyright and license information must be provided for
+                                            files before
+                                            they are published.</label>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Visibility:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <div>If you need to make your course public please contact your administrator/support
+                                        </div>
+                                        <select id="visibilty" name="visibilty">
+                                            <option value="visibilty">Course</option>
+                                        </select>
+                                        <input type="checkbox" value="publiccourse" name="check-publiccourse"
+                                            id="chkbox-publiccourse" />
+                                        <label for="chkbox-publiccourse">Include this course in the public course index</label>
+        
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Format:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <select id="format" name="format">
+                                            <option value="format">On-Campus</option>
+                                        </select>
+                                    </td>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Mastery Paths:</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <input type="checkbox" value="masterypaths" name="check-masterypaths"
+                                            id="chkbox-masterypaths" />
+                                        <label for="chkbox-masterypaths">Enable individual learning paths for students based on
+                                            assessment</label>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-end">
+                                    <h6>Description</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <td style="border: none;">
+                                        <form id="textarea">
+                                            <textarea cols="30" rows="10"></textarea>
+                                        </form>
+                                    </td>
+                                </div>
+                            </div>        
+                </div>
+            </div>
+    </div>
 </body>
 </html>
